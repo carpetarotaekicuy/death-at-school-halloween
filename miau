@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Death at School - Acceso</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff99;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    input {
+      background: black;
+      border: 1px solid #00ff99;
+      color: #00ff99;
+      padding: 10px;
+      width: 250px;
+      text-align: center;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 20px;
+      background: #00ff99;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00cc77;
+    }
+    .error {
+      color: red;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>CONTRASEÑA:</h2>
+  <input type="password" id="password" placeholder="Escribe aquí..." />
+  <button onclick="checkPassword()">Entrar</button>
+  <div class="error" id="error"></div>
+
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById("password").value.trim();
+      const error = document.getElementById("error");
+
+      if (pass === "ricktest") {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      } else if (pass === "darkroom") {
+        window.location.href = "https://picsum.photos/";
+      } else if (pass === "mysticdoc") {
+        window.location.href = "https://example.com/secret-file";
+      } else {
+        error.textContent = "Contraseña incorrecta.";
+      }
+    }
+  </script>
+</body>
+</html>
